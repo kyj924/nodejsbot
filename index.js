@@ -40,7 +40,7 @@ client.on('message', (message) => {
 
   if(message.content == '%st') {
     let embed = new Discord.RichEmbed()
-    let img = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F642537071819173681%2F&psig=AOvVaw30_1na473rIDrbft1pwaTn&ust=1600877905178000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjOkIqV_esCFQAAAAAdAAAAABAD';
+    let img = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
     embed.setColor('#186de6')
     embed.setAuthor('마리봇 서버정보', img)
@@ -70,7 +70,7 @@ client.on('message', (message) => {
   }
 
   if(message.content == '%embed') {
-    let img = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F642537071819173681%2F&psig=AOvVaw30_1na473rIDrbft1pwaTn&ust=1600877905178000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjOkIqV_esCFQAAAAAdAAAAABAD';
+    let img = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
@@ -88,7 +88,7 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   } else if(message.content == '%help') {
-    let helpImg = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F642537071819173681%2F&psig=AOvVaw30_1na473rIDrbft1pwaTn&ust=1600877905178000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjOkIqV_esCFQAAAAAdAAAAABAD';
+    let helpImg = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
     let commandList = [
       {name: '%help', desc: 'help'},
       {name: 'ping', desc: '현재 핑 상태'},
