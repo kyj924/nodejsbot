@@ -40,7 +40,7 @@ client.on('message', (message) => {
 
   if(message.content == '%st') {
     let embed = new Discord.RichEmbed()
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let img = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F642537071819173681%2F&psig=AOvVaw30_1na473rIDrbft1pwaTn&ust=1600877905178000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjOkIqV_esCFQAAAAAdAAAAABAD';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
     embed.setColor('#186de6')
     embed.setAuthor('마리봇 서버정보', img)
@@ -70,7 +70,7 @@ client.on('message', (message) => {
   }
 
   if(message.content == '%embed') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let img = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F642537071819173681%2F&psig=AOvVaw30_1na473rIDrbft1pwaTn&ust=1600877905178000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjOkIqV_esCFQAAAAAdAAAAABAD';
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
@@ -88,11 +88,10 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   } else if(message.content == '%help') {
-    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let helpImg = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F642537071819173681%2F&psig=AOvVaw30_1na473rIDrbft1pwaTn&ust=1600877905178000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjOkIqV_esCFQAAAAAdAAAAABAD';
     let commandList = [
       {name: '%help', desc: 'help'},
       {name: 'ping', desc: '현재 핑 상태'},
-      {name: '', desc: ''},
       {name: '%전체공지', desc: 'dm으로 전체 공지 보내기'},
       {name: '%전체공지2', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
       {name: '%청소', desc: '텍스트 지움'},
