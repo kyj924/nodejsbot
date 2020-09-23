@@ -63,14 +63,14 @@ client.on('message', (message) => {
     if (rper == 0) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#fcfca7')
-      embed.setAuthor('귀여움')
+      embed.setAuthor('세상에서 제일 아름다움')
       message.channel.send(embed);
     }
 
     if(rper == 1) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#c4b0ff')
-      embed.setAuthor('사랑스러움')
+      embed.setAuthor('이쁘고 귀엽고 사랑스러움')
       message.channel.send(embed);
     }
 
@@ -84,25 +84,25 @@ client.on('message', (message) => {
     if(rper == 3) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#fa9eff')
-      embed.setAuthor('이쁨')
+      embed.setAuthor('**옵치** 하고싶어 하는 중')
       message.channel.send(embed);
     }
   }
 
   if(message.content.startsWith('/으네상태')) {
-    var rper = Math.floor(Math.random()*3);
+    var rper = Math.floor(Math.random()*5);
 
     if(rper == 0) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#000000')
-      embed.setAuthor('취함 ')
+      embed.setAuthor('취함(자러가.. -성이름)')
       message.channel.send(embed);
     }
 
     if(rper == 1) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#8a8a8a')
-      embed.setAuthor('졸림')
+      embed.setAuthor('화남화남(대피하세여 여러분)')
       message.channel.send(embed);
     }
 
@@ -110,6 +110,20 @@ client.on('message', (message) => {
       let embed = new Discord.RichEmbed()
       embed.setColor('#dc7aff')
       embed.setAuthor('승우랑 데이트중')
+      message.channel.send(embed);
+    }
+
+    if(rper == 3) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#dc7aff')
+      embed.setAuthor('졸림(암튼 졸림 아니더라도 졸림)')
+      message.channel.send(embed);
+    }
+
+    if(rper == 4) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#dc7aff')
+      embed.setAuthor('안졸림(안졸릴걸..? 암튼  안졸림)')
       message.channel.send(embed);
     }
   }
