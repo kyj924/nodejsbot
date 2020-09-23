@@ -73,7 +73,10 @@ client.on('message', (message) => {
     }
 
     if(rper == 3) {
-      message.channel.send("용주와 꽁냥거리는중")
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#186de6')
+      embed.setAuthor('이쁨')
+      message.channel.send(embed);
     }
   }
 
@@ -83,15 +86,14 @@ client.on('message', (message) => {
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
     embed.setColor('#186de6')
     embed.setAuthor('마리봇 서버정보', img)
-    embed.setFooter(`MG42`)
-    embed.addBlankField()
     embed.addField('RAM 사용량',    `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true);
     embed.addField('구동 시간', `${duration}`, true);
-    embed.addField('user',         `${client.users.size.toLocaleString()}`, true);
+    embed.addField('사용자 수',         `${client.users.size.toLocaleString()}`, true);
     embed.addField('봇이 있는 서버',       `${client.guilds.size.toLocaleString()}`, true);
     // embed.addField('channel',      `${client.channels.size.toLocaleString()}`, true);
-    embed.addField('Discord.js',   `v${Discord.version}`, true);
-    embed.addField('Node',         `${process.version}`, true);
+    embed.addField('자바 버전',   `v${Discord.version}`, true);
+    embed.addField('노드 버전',         `${process.version}`, true);
+    embed.setFooter(`MG42`)
     
     let arr = client.guilds.array();
     let list = '';
@@ -108,12 +110,12 @@ client.on('message', (message) => {
     message.channel.send(embed);
   }
 
-  if(message.content == '/embed') {
+  if(message.content == '/test') {
     let img = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
-      .setAuthor('나긋해', img, 'http://www.naver.com')
+      .setAuthor('설명', img, 'http://www.naver.com')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
@@ -123,19 +125,19 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('나긋해가 만듬', img)
+      .setFooter('부가설명', img)
 
     message.channel.send(embed)
   } else if(message.content == '/help') {
     let helpImg = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
     let commandList = [
-      {name: '/help', desc: 'help'},
-      {name: 'ping', desc: '현재 핑 상태'},
-      {name: '/전체공지', desc: 'dm으로 전체 공지 보내기'},
-      {name: '/전체공지2', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
-      {name: '/청소', desc: '텍스트 지움'},
-      {name: '/초대코드', desc: '해당 채널의 초대 코드 표기'},
-      {name: '/초대코드2', desc: '봇이 들어가있는 모든 채널의 초대 코드 표기'},
+      {name: '/help', ': help'},
+      {name: 'ping', ': 현재 핑 상태'},
+      {name: '/전체공지', ': dm으로 전체 공지 보내기'},
+      {name: '/전체공지2', ': dm으로 전체 embed 형식으로 공지 보내기'},
+      {name: '/청소', ': 텍스트 지움'},
+      {name: '/초대코드', ': 해당 채널의 초대 코드 표기'},
+      {name: '/초대코드2', ': 봇이 들어가있는 모든 채널의 초대 코드 표기'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
