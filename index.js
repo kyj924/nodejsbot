@@ -84,7 +84,7 @@ client.on('message', (message) => {
     if(rper == 3) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#fa9eff')
-      embed.setAuthor('**옵치** 하고싶어 하는 중')
+      embed.setAuthor('옵치 하고싶어 하는 중')
       message.channel.send(embed);
     }
   }
