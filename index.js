@@ -49,11 +49,31 @@ client.on('message', (message) => {
       return;
     }
     if (rper == 0) {
-      message.channel.send("사다리 추첨 결과는"+text2[2]+"입니다.")
+      message.channel.send("사다리 추첨 결과는"+text2[1]+"입니다.")
     }
 
     if(rper == 1) {
       message.channel.send("사다리 추첨 결과는"+text2[2]+"입니다.")
+    }
+  }
+
+  if(message.content.startsWith('/마리상태')) {
+    var rper = Math.floor(Math.random()*4);
+
+    if (rper == 0) {
+      message.channel.send("귀여움")
+    }
+
+    if(rper == 1) {
+      message.channel.send("사랑스러움")
+    }
+
+    if(rper == 2) {
+      message.channel.send("개이쁨")
+    }
+
+    if(rper == 3) {
+      message.channel.send("용주와 꽁냥거리는중")
     }
   }
 
@@ -65,10 +85,10 @@ client.on('message', (message) => {
     embed.setAuthor('마리봇 서버정보', img)
     embed.setFooter(`MG42`)
     embed.addBlankField()
-    embed.addField('RAM usage',    `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true);
-    embed.addField('running time', `${duration}`, true);
+    embed.addField('RAM 사용량',    `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true);
+    embed.addField('구동 시간', `${duration}`, true);
     embed.addField('user',         `${client.users.size.toLocaleString()}`, true);
-    embed.addField('server',       `${client.guilds.size.toLocaleString()}`, true);
+    embed.addField('봇이 있는 서버',       `${client.guilds.size.toLocaleString()}`, true);
     // embed.addField('channel',      `${client.channels.size.toLocaleString()}`, true);
     embed.addField('Discord.js',   `v${Discord.version}`, true);
     embed.addField('Node',         `${process.version}`, true);
