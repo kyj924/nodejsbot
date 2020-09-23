@@ -77,7 +77,7 @@ client.on('message', (message) => {
     if(rper == 2) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#ffc2e6')
-      embed.setAuthor('개이쁨')
+      embed.setAuthor('용주랑 데이트중')
       message.channel.send(embed);
     }
 
