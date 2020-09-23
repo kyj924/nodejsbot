@@ -38,6 +38,25 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
 
+  if(message.content.startsWith('/추첨')) {
+    message.channel.send('추첨중..')
+    var te = message.content.substring(4)
+    var text2 = message.content.split(' ');
+    var rper = Math.floor(Math.random()*2);
+
+    if (te < 4){
+      message.channel.send("!사다리 변수1 변수2 으로 입력해주세요.")
+      return;
+    }
+    if (reper == 0) {
+      message.channel.send("사다리 추첨 결과는"+text2[2]+"입니다.")
+    }
+
+    if(reper == 1) {
+      message.channel.send("사다리 추첨 결과는"+text2[2]+"입니다.")
+    }
+  }
+
   if(message.content == '/st') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
