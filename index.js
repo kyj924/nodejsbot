@@ -148,7 +148,7 @@ client.on('message', (message) => {
     if(rper == 2) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#ffeb0a')
-      embed.setAuthor('게임하는증')
+      embed.setAuthor('게임하는중')
       message.channel.send(embed);
     }
   }
