@@ -61,20 +61,29 @@ client.on('message', (message) => {
     var rper = Math.floor(Math.random()*4);
 
     if (rper == 0) {
-      message.channel.send("귀여움")
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#fcfca7')
+      embed.setAuthor('귀여움')
+      message.channel.send(embed);
     }
 
     if(rper == 1) {
-      message.channel.send("사랑스러움")
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#c4b0ff')
+      embed.setAuthor('사랑스러움')
+      message.channel.send(embed);
     }
 
     if(rper == 2) {
-      message.channel.send("개이쁨")
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#ffc2e6')
+      embed.setAuthor('개이쁨')
+      message.channel.send(embed);
     }
 
     if(rper == 3) {
       let embed = new Discord.RichEmbed()
-      embed.setColor('#186de6')
+      embed.setColor('#fa9eff')
       embed.setAuthor('이쁨')
       message.channel.send(embed);
     }
