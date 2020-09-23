@@ -89,6 +89,56 @@ client.on('message', (message) => {
     }
   }
 
+  if(message.content.startsWith('/으네상태')) {
+    var rper = Math.floor(Math.random()*3);
+
+    if(rper == 0) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#000000')
+      embed.setAuthor('취함 ')
+      message.channel.send(embed);
+    }
+
+    if(rper == 1) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#8a8a8a')
+      embed.setAuthor('졸림')
+      message.channel.send(embed);
+    }
+
+    if(rper == 2) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#dc7aff')
+      embed.setAuthor('승우랑 데이트중')
+      message.channel.send(embed);
+    }
+  }
+
+  if(message.content.startsWith('/미르상태')) {
+    var rper = Math.floor(Math.random()*3);
+
+    if(rper == 0) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#ffeb0a')
+      embed.setAuthor('야구하는중 ')
+      message.channel.send(embed);
+    }
+
+    if(rper == 1) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#ffeb0a')
+      embed.setAuthor('쉬는중')
+      message.channel.send(embed);
+    }
+
+    if(rper == 2) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#ffeb0a')
+      embed.setAuthor('게임하는증')
+      message.channel.send(embed);
+    }
+  }
+
   if(message.content == '/st') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
