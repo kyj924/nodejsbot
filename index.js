@@ -49,11 +49,11 @@ client.on('message', (message) => {
       return;
     }
     if (rper == 0) {
-      message.channel.send("사다리 추첨 결과는"+text2[1]+"입니다.")
+      message.channel.send(" 추첨 결과는"+text2[1]+"입니다.")
     }
 
     if(rper == 1) {
-      message.channel.send("사다리 추첨 결과는"+text2[2]+"입니다.")
+      message.channel.send(" 추첨 결과는"+text2[2]+"입니다.")
     }
   }
 
@@ -204,13 +204,18 @@ client.on('message', (message) => {
   } else if(message.content == '/help') {
     let helpImg = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
     let commandList = [
-      {name: '/help',dedsec: 'help'},
-      {name: 'ping',dedsec: '현재 핑 상태'},
-      {name: '/전체공지',dedsec: 'dm으로 전체 공지 보내기'},
-      {name: '/전체공지2',dedsec: 'dm으로 전체 embed 형식으로 공지 보내기'},
-      {name: '/청소',dedsec: '텍스트 지움'},
-      {name: '/초대코드',dedsec: '해당 채널의 초대 코드 표기'},
-      {name: '/초대코드2',dedsec: '봇이 들어가있는 모든 채널의 초대 코드 표기'},
+      {name: '/help', desc: '도움말'},
+      {name: '/st', desc: '봇 상태 보기'},
+      {name: 'ping', desc: '현재 핑 상태'},
+      {name: '/전체공지', desc: 'dm으로 전체 공지 보내기'},
+      {name: '/전체공지2', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
+      {name: '/청소', desc: '텍스트 지움'},
+      {name: '/초대코드', desc: '해당 채널의 초대 코드 표기'},
+      {name: '/초대코드2', desc: '봇이 들어가있는 모든 채널의 초대 코드 표기'},
+      {name: '/추첨', desc: '2가지 선택지중 하나를 골라줍니다.'},
+      {name: '/마리상태', desc: '마리의 상태는?'},
+      {name: '/으네상태', desc: '으네의 상태는?'},
+      {name: '/미르상태', desc: '미르의 상태는?'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
