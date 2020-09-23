@@ -5,8 +5,8 @@ const moment = require("moment");
 require("moment-duration-format");
 const welcomeChannelName = "🌈ㅣ어서오세요";
 const byeChannelName = "💧ㅣ안녕히가세요";
-const welcomeChannelComment = "사랑이 싹트는 곳에 오신것을 환영합니다아~!.";
-const byeChannelComment = "다음에 또만나요오오ㅜㅜㅜㅜ.";
+const welcomeChannelComment = "**사랑이 싹트는 곳에 오신것을 환영합니다아~!**";
+const byeChannelComment = "**다음에 또만나요오오ㅜㅜㅜㅜ**";
 
 client.on('ready', () => {
   console.log('켰다.');
