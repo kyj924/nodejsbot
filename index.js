@@ -155,7 +155,7 @@ client.on('message', (message) => {
 
   if(message.content == '/st') {
     let embed = new Discord.RichEmbed()
-    let img = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
+    let img = 'https://cdn.discordapp.com/emojis/731203512142135387.gif';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
     embed.setColor('#186de6')
     embed.setAuthor('마리봇 서버정보', img)
@@ -202,7 +202,7 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   } else if(message.content == '/help') {
-    let helpImg = 'https://cdn.discordapp.com/attachments/669935495182286882/757136269376618566/-.png';
+    let helpImg = 'https://cdn.discordapp.com/emojis/667750787535077385.gif';
     let commandList = [
       {name: '/help', desc: '도움말'},
       {name: '/st', desc: '봇 상태 보기'},
