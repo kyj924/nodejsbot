@@ -63,8 +63,8 @@ client.on('message', (message) => {
       var text2 = message.content.split(' ');
       var rper = Math.floor(Math.random()*4);
   
-      if (te < 4){
-        message.channel.send("/사다리 플레이어1 플레이어2 플레이어3 플레이어4 플레이어5 플레이어6 플레이어7 플레이어8 플레이어9 플레이어10 으로 입력해주세요.")
+      if (te < 1){
+        message.channel.send("/사다리 플레이어 플레이어 와 같이 입력해주세요.")
         return;
       }
       if (rper == 0) {
@@ -81,6 +81,10 @@ client.on('message', (message) => {
       
       if(rper == 3) {
         message.channel.send(" 사다리 결과는 1팀: "+text2[2]+" "+text2[3]+" "+text2[6]+" "+text2[7]+" "+text2[10]+" \n                  2팀: "+text2[1]+" "+text2[4]+" "+text2[5]+" "+text2[8]+" "+text2[9]+"입니다.")
+      }
+
+      if (isNaN(text2)) {
+       text2 = 0;
       }
     }
 
