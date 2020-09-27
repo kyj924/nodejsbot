@@ -84,6 +84,10 @@ client.on('message', (message) => {
       }
     }
 
+    var detect_cnt = row.length;
+    var solve_cnt = row2.length;
+    var total_cnt = row.length + row2.length;
+    var solve_resilt = solve_cnt * 100;
     if (isNaN(solve_result)) {
       solve_result = 0;
     }
