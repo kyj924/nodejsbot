@@ -70,7 +70,7 @@ client.on('message', (message) => {
       if (rper == 0) {
         message.channel.send(" 사다리 결과는 \n 1팀: "+text2[1]+ +text2[3]+ +text2[5]+ +text2[7]+ +text2[9]+" \n 2팀: "+text2[2]+ +text2[4]+ +text2[6]+ +text2[8]+ +text2[10]+"입니다.")
       }
-  
+      
       if(rper == 1) {
         message.channel.send(" 사다리 결과는 \n 1팀: "+text2[2]+ +text2[4]+ +text2[6]+ +text2[8]+ +text2[10]+" \n 2팀: "+text2[1]+ +text2[3]+ +text2[5]+ +text2[7]+ +text2[9]+"입니다.")
       }
@@ -83,8 +83,8 @@ client.on('message', (message) => {
         message.channel.send(" 사다리 결과는 \n 1팀: "+text2[2]+ +text2[3]+ +text2[6]+ +text2[7]+ +text2[10]+" \n 2팀: "+text2[1]+ +text2[4]+ +text2[5]+ +text2[8]+ +text2[9]+"입니다.")
       }
 
-      if (isNaN(text2)) {
-       text2 = 0;
+      if (isNaN(te)) {
+       te = 0;
       }
     }
 
