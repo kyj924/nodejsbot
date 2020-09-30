@@ -57,7 +57,7 @@ client.on('message', (message) => {
     }
   }
   
-  client.on('message', (message) => {
+  bot.on("message", message => {
     const args = message.content.split(" ");
     if (message.author.id != bot.user.id && (message.content[0] === "+" || message.content.index0f(bot.user.toString()) == 0)) {
       var cmdTxt = message.content.split(" ")[0].substring(1);
@@ -73,17 +73,8 @@ client.on('message', (message) => {
       }
     }
     
-  if  (cmdTxt === "test") {
-    var arr = ["P1", "P2", "P3", "P4", "P5", "P6", "P7"," P8", "P9", "P10",];
-    arr = shuffle(arr);
-    var half_length = Math.ceil(arr.lenght / 2);
-    var leftSide = arr.splice(0, half_length);
-    message.channel.send('Team 1 \n' + arr);
-    message.channel,send('Team 2 \n' + leftSide);
-  }
-  
   if (cmdTxt === "react") {
-    const emoji = message.guild.emojis.find(emoji => emoji.name === 'video_game')
+    const emoji = message.guild.emojis.find(emoji => emoji.name === 'video_game');
     const reactionFilter = (reaction, user) => reaction.emoji.name === 'video_game';
     const embed = new Discord.MessageEmbed({
       title: "팀 반응 테스트",
@@ -149,6 +140,22 @@ client.on('message', (message) => {
   
     })
   }
+
+  function shuffle(array) {
+    var currentIndex = array.length,
+        temporaryValue, randonIndex;
+    while(0 !== currentIndex) {
+  
+      randonIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      temporaryValue = arry[currentIndex];
+      arry[currentIndex] = arry[randomIndex]
+      arry[randonIndex] = temporaryValue;
+    }
+    return arry;
+  }
+
 
   if(message.content.startsWith('/마리상태')) {
     var rper = Math.floor(Math.random()*4);
@@ -423,21 +430,6 @@ client.on('message', (message) => {
     }
   }
 });
-
-function shuffle(array) {
-  var currentIndex = array.length,
-      temporaryValue, randonIndex;
-  while(0 !== currentIndex) {
-
-    randonIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    temporaryValue = arry[currentIndex];
-    arry[currentIndex] = arry[randomIndex]
-    arry[randonIndex] = temporaryValue;
-  }
-  return arry;
-}
 
 function checkPermission(message) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) {
