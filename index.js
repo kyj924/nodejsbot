@@ -57,7 +57,7 @@ client.on('message', (message) => {
     }
   }
   
-  if  (cmdTxt === "test") {
+  if  (message.content.startsWith ("test")) {
     var arr = ["P1", "P2", "P3", "P4", "P5", "P6", "P7"," P8", "P9", "P10",];
     arr = shuffle(arr);
     var half_length = Math.ceil(arr.lenght / 2);
@@ -66,7 +66,7 @@ client.on('message', (message) => {
     message.channel,send('Team 2 \n' + leftSide);
   }
   
-  if (cmdTxt === "react") {
+  if (message.content.startsWith ("/react")) {
     const emoji = message.guild.emojis.find(emoji => emoji.name === 'video_game')
     const reactionFilter = (reaction, user) => reaction.emoji.name === 'video_game';
     const embed = new Discord.MessageEmbed({
