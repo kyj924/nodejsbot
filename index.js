@@ -10,7 +10,7 @@ const byeChannelComment = "**다음에 또만나요오오ㅜㅜㅜㅜ**";
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setPresence({ game: { name: '/helpㅣ제작자: MG42' }, status: 'online' })
+  client.user.setPresence({ game: { name: '/helpㅣ문의: MG42' }, status: 'online' })
 });
 
 client.on("guildMemberAdd", (member) => {
