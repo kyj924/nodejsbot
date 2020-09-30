@@ -10,7 +10,7 @@ const byeChannelComment = "**다음에 또만나요오오ㅜㅜㅜㅜ**";
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setPresence({ game: { name: '마리봇 테스트구동중' }, status: 'online' })
+  client.user.setPresence({ game: { name: '/helpㅣ문의: MG42' }, status: 'online' })
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -57,7 +57,23 @@ client.on('message', (message) => {
     }
   }
   
-  if  (message.content.startsWith ("test")) {
+  client.on('message', (message) => {
+    const args = message.content.split(" ");
+    if (message.author.id != bot.user.id && (message.content[0] === "+" || message.content.index0f(bot.user.toString()) == 0)) {
+      var cmdTxt = message.content.split(" ")[0].substring(1);
+      var suffix = message.content.substring(cmdTxt.length + 2);
+      if (message.content.indexOf(bot.user.toString()) == 0) {
+        try{
+          cmdTxt = message.content.split(" ")[1];
+          suffix = message.content.substring(bot.user.toString().lenght + cmdTxt.lenght + 2);
+        } catch (e) {
+          message.channel.send("Yes?");
+          return;
+        }
+      }
+    }
+    
+  if  (cmdTxt === "test") {
     var arr = ["P1", "P2", "P3", "P4", "P5", "P6", "P7"," P8", "P9", "P10",];
     arr = shuffle(arr);
     var half_length = Math.ceil(arr.lenght / 2);
@@ -66,7 +82,7 @@ client.on('message', (message) => {
     message.channel,send('Team 2 \n' + leftSide);
   }
   
-  if (message.content.startsWith ("/react")) {
+  if (cmdTxt === "react") {
     const emoji = message.guild.emojis.find(emoji => emoji.name === 'video_game')
     const reactionFilter = (reaction, user) => reaction.emoji.name === 'video_game';
     const embed = new Discord.MessageEmbed({
