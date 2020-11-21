@@ -154,33 +154,40 @@ client.on('message', (message) => {
   }
 
   if(message.content.startsWith('/호떡')) {
-    var rper = Math.floor(Math.random()*4);
+    var rper = Math.floor(Math.random()*5);
 
     if(rper == 0) {
       let embed = new Discord.RichEmbed()
-      embed.setColor('#ffeb0a')
+      embed.setColor('#bb00ff')
       embed.setAuthor('뭐하세여 ')
       message.channel.send(embed);
     }
 
     if(rper == 1) {
       let embed = new Discord.RichEmbed()
-      embed.setColor('#ffeb0a')
+      embed.setColor('#bb00ff')
       embed.setAuthor('죽으세요')
       message.channel.send(embed);
     }
 
     if(rper == 2) {
       let embed = new Discord.RichEmbed()
-      embed.setColor('#ffeb0a')
+      embed.setColor('#bb00ff')
       embed.setAuthor('죽으시라구요')
       message.channel.send(embed);
     }
 
     if(rper == 3) {
       let embed = new Discord.RichEmbed()
-      embed.setColor('#ffeb0a')
+      embed.setColor('#bb00ff')
       embed.setAuthor('장난인거 알죠?')
+      message.channel.send(embed);
+    }
+
+    if(rper == 4) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#bb00ff')
+      embed.setAuthor('장난 아니에요')
       message.channel.send(embed);
     }
   }
