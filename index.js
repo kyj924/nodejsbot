@@ -153,6 +153,38 @@ client.on('message', (message) => {
     }
   }
 
+  if(message.content.startsWith('/호떡')) {
+    var rper = Math.floor(Math.random()*4);
+
+    if(rper == 0) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#ffeb0a')
+      embed.setAuthor('뭐하세여 ')
+      message.channel.send(embed);
+    }
+
+    if(rper == 1) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#ffeb0a')
+      embed.setAuthor('죽으세요')
+      message.channel.send(embed);
+    }
+
+    if(rper == 2) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#ffeb0a')
+      embed.setAuthor('죽으시라구요')
+      message.channel.send(embed);
+    }
+
+    if(rper == 3) {
+      let embed = new Discord.RichEmbed()
+      embed.setColor('#ffeb0a')
+      embed.setAuthor('장난인거 알죠?')
+      message.channel.send(embed);
+    }
+  }
+
   if(message.content == '/st') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/emojis/731203512142135387.gif';
