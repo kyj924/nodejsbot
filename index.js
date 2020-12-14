@@ -8,6 +8,22 @@ const byeChannelName = "💧ㅣ안녕히가세요";
 const welcomeChannelComment = "**사랑이 싹트는 곳에 오신것을 환영합니다아~!**";
 const byeChannelComment = "**다음에 또만나요오오ㅜㅜㅜㅜ**";
 
+//날씨
+const { readdirSync } = require('fs');
+const { join } = require('path');
+
+client.commands = new Discord.Collection();
+
+const prefix = '/' //자신의 프리픽스
+
+
+const commandFile = readdirSync(join(__dirname, "commands")).filter(file => file.endsWith("js"));
+
+for (const file of commandFile) {
+  const command = require(join(__dirname, "commands", `${file}`));
+  client.commands.set(command.name, command);
+}
+
 client.on('ready', () => {
   console.log('켰다.');
   client.user.setPresence({ game: { name: '/helpㅣ문의:MG#4260' }, status: 'online' })
@@ -30,6 +46,29 @@ client.on("guildMemberRemove", (member) => {
 
   byeChannel.send(`<@${deleteUser.id}> ${byeChannelComment}\n`);
 });
+
+//날씨
+client.on("error", console.error);
+
+client.on("message", async message => {
+
+  if(message.author.bot) return;
+  if(message.channel.type === 'dm') return;
+
+  if(message.content.startsWith(prefix)) {
+    const args = message.content.slice(prefix.length).trim().split(/ +/);
+
+    const command = args.shift().toLowerCase();
+
+    if(!client.commands.has(command)) return;
+
+    try {
+      client.commands.get(command).run(client, message, args);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+})
 
 client.on('message', (message) => {
   if(message.author.bot) return;
@@ -368,6 +407,7 @@ client.on('message', (message) => {
         .catch(console.error)
     }
   }
+  
 });
 
 function checkPermission(message) {
