@@ -159,7 +159,7 @@ client.on('message', (message) => {
     if(rper == 0) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#bb00ff')
-      embed.setAuthor('뭐하세여 ')
+      embed.setAuthor('호떡이 화남(조심)')
       message.channel.send(embed);
     }
 
