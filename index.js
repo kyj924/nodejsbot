@@ -153,7 +153,7 @@ client.on('message', (message) => {
     }
   }
 
-  if(message.content.startsWith('/호떡')) {
+  if(message.content.startsWith('/호떡상태')) {
     var rper = Math.floor(Math.random()*5);
 
     if(rper == 0) {
@@ -166,28 +166,28 @@ client.on('message', (message) => {
     if(rper == 1) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#bb00ff')
-      embed.setAuthor('죽으세요')
+      embed.setAuthor('호떡이는 심심함')
       message.channel.send(embed);
     }
 
     if(rper == 2) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#bb00ff')
-      embed.setAuthor('죽으시라구요')
+      embed.setAuthor('아...배그..')
       message.channel.send(embed);
     }
 
     if(rper == 3) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#bb00ff')
-      embed.setAuthor('장난인거 알죠?')
+      embed.setAuthor('옵치...')
       message.channel.send(embed);
     }
 
     if(rper == 4) {
       let embed = new Discord.RichEmbed()
       embed.setColor('#bb00ff')
-      embed.setAuthor('장난 아니에요')
+      embed.setAuthor('자는중 zzz...')
       message.channel.send(embed);
     }
   }
